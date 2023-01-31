@@ -1,8 +1,6 @@
 import { UserProps } from "../types/user";
 import React, {useState} from "react";
 
-
-
 import Search from "../components/Search";
 import User from "../components/User";
 import Error from "../components/Error";
@@ -14,6 +12,7 @@ const Home = () => {
     const loadUser = async (userName: string) => {
         setUser(null)
         setError(false);
+
 
         const res = await fetch(`https://api.github.com/users/${userName}`);
 

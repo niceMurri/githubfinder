@@ -1,7 +1,7 @@
 type SearchProps = {
     loadUser:(userName:string) => Promise<void>;
-
 }
+
 import { BsSearch } from 'react-icons/bs'
 import React, { KeyboardEvent, useState } from 'react';
 import classes from './Search.module.css';
@@ -31,7 +31,7 @@ const Search = ({loadUser}:SearchProps) => {
                 onKeyDown={handleKeyDown}
                 />
                 <button
-                 onClick={(e) => loadUser(userName)}
+                 onClick={() => loadUser(userName)}
                 >
                     <BsSearch />
                 </button>

@@ -14,7 +14,7 @@ const User = ({
     return(
         <div className={classes.user}>
             <img src={avatar_url} alt="avatar github" />
-            <h2>{login}</h2>
+            <p>{login}</p>
 
             {/* if location exist */}
             {location && 
@@ -24,17 +24,17 @@ const User = ({
             </p>}
 
             <div className={classes.stats}>
-                <div className={classes.number}>
+                <div >
                     <p>Seguidores</p>
-                    <p>{followers}</p>
+                    <p className={classes.number}>{followers}</p>
                 </div>
-                <div className={classes.number}>
+                <div>
                     <p>Seguindo</p>
-                    <p>{following}</p>
+                    <p className={classes.number}>{following}</p>
                 </div>
             </div>
 
-            <Link to={`/repos/${login}`} />
+            <Link to={`/repos/${login}`} >Ver os melhores projetos.</Link>
         </div>
     )
 }
